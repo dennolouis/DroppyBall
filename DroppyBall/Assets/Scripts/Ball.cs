@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
 
     Rigidbody rb;
 
-    [SerializeField] float force = 10;
+    [SerializeField] float speed = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -27,16 +27,23 @@ public class Ball : MonoBehaviour
 
     void MoveLeft()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.AddForce(new Vector3(-1, 0, 0) * force);
+        // rb.velocity = Vector3.zero;
+        // rb.angularVelocity = Vector3.zero;
+        transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed, Space.World);
     }
 
     void MoveRight()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.AddForce(new Vector3(1, 0, 0) * force);
+        transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime * speed, Space.World);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Wall")
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
     }
 
 }

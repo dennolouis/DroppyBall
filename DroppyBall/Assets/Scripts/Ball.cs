@@ -27,23 +27,37 @@ public class Ball : MonoBehaviour
 
     void MoveLeft()
     {
-        // rb.velocity = Vector3.zero;
-        // rb.angularVelocity = Vector3.zero;
-        transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed, Space.World);
+        StopMotion();
+        //transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed, Space.World);
+        rb.AddForce(new Vector3(-1, 0, 0) * speed);
     }
 
     void MoveRight()
     {
-        transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime * speed, Space.World);
+        StopMotion();
+        //transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime * speed, Space.World);
+        rb.AddForce(new Vector3(1, 0, 0) * speed);
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Wall")
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
+        // if(other.gameObject.tag == "Wall")
+        // {
+        //     rb.velocity = Vector3.zero;
+        //     rb.angularVelocity = Vector3.zero;
+        // }
+    }
+
+    void StopMotion()
+    {
+        Vector3 velocity = rb.velocity;
+        velocity.x = 0;
+
+        Vector3 angularVelocity = rb.angularVelocity;
+        angularVelocity.x = 0;
+
+        rb.velocity = velocity;
+        rb.angularVelocity = angularVelocity;
     }
 
 }

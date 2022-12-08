@@ -33,6 +33,6 @@ public class SpawnPlateform : MonoBehaviour
     {
         GameObject plat = Instantiate(platform, new Vector3(0, -5f, 0), Quaternion.identity);
         Destroy(plat, 3);
-        Invoke("Spawn", 2);
+        Invoke("Spawn", 1);
     }
 }

@@ -31,8 +31,9 @@ public class SpawnPlateform : MonoBehaviour
 
     void Spawn()
     {
-        GameObject plat = Instantiate(platform, new Vector3(0, -5f, 0), Quaternion.identity);
-        Destroy(plat, 3);
-        Invoke("Spawn", 1);
+        float xpos = Random.Range(-2.5f, 2.5f);
+        GameObject plat = Instantiate(platform, new Vector3(xpos, -5f, 0), Quaternion.identity);
+        Destroy(plat, 4);
+        Invoke("Spawn", 0.5f);
     }
 }

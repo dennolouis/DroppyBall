@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e3cad60112434ee1ae4849dff80a862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
 --- !u!114 &5126524198899214915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5071249660456927896}
+  - component: {fileID: 8974304565671458691}
   m_Layer: 0
   m_Name: plat (1)
   m_TagString: Untagged
@@ -671,7 +672,7 @@ Transform:
   m_GameObject: {fileID: 3051034492824350653}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 1, z: 1}
+  m_LocalScale: {x: 0.45, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1575271081660998482}
@@ -680,6 +681,22 @@ Transform:
   m_Father: {fileID: 1022773801346645557}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8974304565671458691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051034492824350653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d970b8f95f84137815e9c84f85ff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  x: 0
+  y: 0
+  z: 1
 --- !u!1 &5023044253228364394
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3482971200721075356}
+  - component: {fileID: 8298800258739605486}
   m_Layer: 0
   m_Name: plat
   m_TagString: Untagged
@@ -705,7 +723,7 @@ Transform:
   m_GameObject: {fileID: 5023044253228364394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 1, z: 1}
+  m_LocalScale: {x: 0.45, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1022773801074197153}
@@ -714,6 +732,22 @@ Transform:
   m_Father: {fileID: 1022773801346645557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8298800258739605486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023044253228364394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d970b8f95f84137815e9c84f85ff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  x: 0
+  y: 0
+  z: 1
 --- !u!1 &5765618378209935893
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9177197984869091248}
+  - component: {fileID: 8545557293301558615}
   m_Layer: 0
   m_Name: plat (2)
   m_TagString: Untagged
@@ -934,7 +969,7 @@ Transform:
   m_GameObject: {fileID: 7486134501021323938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 1, z: 1}
+  m_LocalScale: {x: 0.45, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2075241409858836799}
@@ -943,6 +978,22 @@ Transform:
   m_Father: {fileID: 1022773801346645557}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8545557293301558615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486134501021323938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d970b8f95f84137815e9c84f85ff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  x: 0
+  y: 0
+  z: 1
 --- !u!1 &8635107242073726306
 GameObject:
   m_ObjectHideFlags: 0

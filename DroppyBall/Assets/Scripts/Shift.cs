@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shift : MonoBehaviour
 {
 
-    [SerializeField] int speed = 10;
+    [SerializeField] float speed = 1;
     float direction;
 
     AudioSource audioSource;
@@ -14,6 +14,7 @@ public class Shift : MonoBehaviour
     {
         direction = Mathf.Floor(Random.Range(-1, 2));
         audioSource = GetComponent<AudioSource>();
+        speed = Random.Range(speed * 0.7f, speed * 1.3f);
     }
     // Update is called once per frame
     void Update()

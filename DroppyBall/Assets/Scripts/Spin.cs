@@ -14,7 +14,7 @@ public class Spin : MonoBehaviour
     private void Start()
     {
         direction = Random.Range(0, 100) <= 50 ? 1 : -1;
-        if(Random.Range(0, 100) <= 80) direction = 0;
+        if(Random.Range(0, 100) <= 88) direction = 0;
         speed = Random.Range(speed - 5, speed + 5);
     }
 

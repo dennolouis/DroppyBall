@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
 
     Rigidbody rb;
+    Player player;
 
     [SerializeField] float speed = 10;
 
@@ -13,7 +14,8 @@ public class Ball : MonoBehaviour
     void Start()
     {
         rb =  GetComponent<Rigidbody>();
-        //rb.AddForce(new Vector3(1, 0, 0) * force);
+        player = FindObjectOfType<Player>();
+        player.AddLife();
     }
 
     // Update is called once per frame
@@ -58,6 +60,16 @@ public class Ball : MonoBehaviour
 
         rb.velocity = velocity;
         rb.angularVelocity = angularVelocity;
+    }
+
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Finish")
+        {
+            player.DeductLife();
+            Destroy(gameObject);
+        }
     }
 
 }

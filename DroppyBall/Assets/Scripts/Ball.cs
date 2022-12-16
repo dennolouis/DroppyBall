@@ -72,4 +72,11 @@ public class Ball : MonoBehaviour
         }
     }
 
+   
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "ScoreTrigger")
+            player.AddScore(1);
+    }
+
 }

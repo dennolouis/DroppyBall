@@ -6,6 +6,10 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] int lives = 0;
+    [SerializeField] int score = 0;
+    [SerializeField] int ballIndex;
+    [SerializeField] List<GameObject> balls;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +27,21 @@ public class Player : MonoBehaviour
     {
         lives--;
         if(lives <= 0)
-            print("Game Over"); 
+            print("Game Over, Score: " + score.ToString()); 
     }
 
     public void AddLife()
     {
         lives++;
+    }
+
+    public void AddScore(int x)
+    {
+        score += x;
+    }
+
+    public GameObject getSelectedBall()
+    {
+        return balls[ballIndex];
     }
 }

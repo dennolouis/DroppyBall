@@ -9,9 +9,6 @@ public class SpawnPlateform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Spawn(3);
-        // GameObject plat = Instantiate(platform, new Vector3(0, -1.5f, 0), Quaternion.identity);
-        // Destroy(plat, 3);
         Spawn();
     }
 
@@ -20,14 +17,6 @@ public class SpawnPlateform : MonoBehaviour
     {
         
     }
-
-    // IEnumerator Spawn(float seconds)
-    // {
-    //     yield return new WaitForSeconds(seconds);
-    //     GameObject plat = Instantiate(platform, new Vector3(0, -1.5f, 0), Quaternion.identity);
-    //     Destroy(plat, 3);
-    //     StartCoroutine(Spawn(seconds));
-    // }
 
     void Spawn()
     {

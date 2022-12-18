@@ -23,6 +23,6 @@ public class SpawnPowerUp : MonoBehaviour
         float xpos = Random.Range(-2.5f, 2.5f);
         GameObject p = Instantiate(powerUp, new Vector3(xpos, -2.5f, 0), Quaternion.identity);
         Destroy(p, 8f);
-        Invoke("Spawn", 10f);
+        Invoke("Spawn", 20f);
     }
 }

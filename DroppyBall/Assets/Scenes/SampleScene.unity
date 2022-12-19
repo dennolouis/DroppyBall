@@ -873,6 +873,8 @@ MonoBehaviour:
     type: 3}
   verticlePlatform: {fileID: 5083353968255010821, guid: b5f9f2e099c0e434aa02bcfef24159da,
     type: 3}
+  bucketPlatform: {fileID: 7200072060763530453, guid: 2002e2a67b64d45ef9b88261b0fce211,
+    type: 3}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,7 +1364,7 @@ PrefabInstance:
     - target: {fileID: 1022773801346645556, guid: 8d444638beae349ce8f6ee3bae224b56,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1022773801346645557, guid: 8d444638beae349ce8f6ee3bae224b56,
         type: 3}
@@ -1488,6 +1490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vplat
       objectReference: {fileID: 0}
+    - target: {fileID: 5083353968255010821, guid: b5f9f2e099c0e434aa02bcfef24159da,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f9f2e099c0e434aa02bcfef24159da, type: 3}
 --- !u!1001 &4237277819304393167
@@ -1564,3 +1571,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4c31f1f6f30424f9fcfee9d579c049, type: 3}
+--- !u!1001 &7200072061451558337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530452, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530453, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_Name
+      value: BucketPlat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200072060763530453, guid: 2002e2a67b64d45ef9b88261b0fce211,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2002e2a67b64d45ef9b88261b0fce211, type: 3}

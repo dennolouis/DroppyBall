@@ -7,11 +7,13 @@ public class SpawnPlateform : MonoBehaviour
 
     [SerializeField] GameObject platform;
     [SerializeField] GameObject verticlePlatform;
+    [SerializeField] GameObject bucketPlatform;
     // Start is called before the first frame update
     void Start()
     {
         Spawn();
-        SpawnVerticle();
+        Invoke("SpawnVerticle", 50);
+        SpawnBucket();
     }
 
     // Update is called once per frame
@@ -39,5 +41,13 @@ public class SpawnPlateform : MonoBehaviour
         }
         
         Invoke("SpawnVerticle", Random.Range(20f, 40f));
+    }
+
+    void SpawnBucket()
+    {
+        float xpos = Random.Range(-2.5f, 2.5f);
+        GameObject bplat = Instantiate(bucketPlatform, new Vector3(xpos, -5f, 0), Quaternion.identity);
+        Destroy(bplat, 4.5f);
+        Invoke("SpawnBucket", Random.Range(40f, 60f));
     }
 }

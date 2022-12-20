@@ -13,7 +13,7 @@ public class SpawnPlateform : MonoBehaviour
     {
         Spawn();
         Invoke("SpawnVerticle", 50);
-        SpawnBucket();
+        Invoke("SpawnBucket", 80);
     }
 
     // Update is called once per frame

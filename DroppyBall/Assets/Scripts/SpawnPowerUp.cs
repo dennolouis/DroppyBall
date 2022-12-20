@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnPowerUp : MonoBehaviour
 {
 
-    [SerializeField] GameObject powerUp;
+    [SerializeField] GameObject[] powerUps;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +20,9 @@ public class SpawnPowerUp : MonoBehaviour
 
     void Spawn()
     {
+        int i = Random.Range(0, powerUps.Length);
         float xpos = Random.Range(-2.5f, 2.5f);
-        GameObject p = Instantiate(powerUp, new Vector3(xpos, -2.5f, 0), Quaternion.identity);
+        GameObject p = Instantiate(powerUps[i], new Vector3(xpos, -2.5f, 0), Quaternion.identity);
         Destroy(p, 8f);
         Invoke("Spawn", 20f);
     }

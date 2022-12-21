@@ -1,26 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] int lives = 0;
-    [SerializeField] int score = 0;
-    [SerializeField] int ballIndex;
-    [SerializeField] List<GameObject> balls;
+    [SerializeField] int ballIndex; 
+    [SerializeField] List<GameObject> balls;   
+    
+    int lives = 0;
+    int score = 0;
+    TextMeshProUGUI scoreTMP;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreTMP = GameObject.FindGameObjectWithTag("ScoreTMP").GetComponent<TextMeshProUGUI>();
+        scoreTMP.text = "Score: 0";
     }
 
     // Update is called once per frame
     void Update()
     {
         
+
     }
 
     public void DeductLife()
@@ -38,6 +44,7 @@ public class Player : MonoBehaviour
     public void AddScore(int x)
     {
         score += x;
+        scoreTMP.text = "Score: " + score.ToString();
     }
 
     public GameObject getSelectedBall()

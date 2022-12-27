@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     {
         scoreTMP = GameObject.FindGameObjectWithTag("ScoreTMP").GetComponent<TextMeshProUGUI>();
         scoreTMP.text = "Score: 0";
+        Instantiate(balls[ballIndex], new Vector3(0, 1, 0), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
     {
         lives--;
         if(lives <= 0)
-            print("Game Over, Score: " + score.ToString()); 
+            DisplayGameOver();
     }
 
     public void AddLife()
@@ -50,5 +51,10 @@ public class Player : MonoBehaviour
     public GameObject getSelectedBall()
     {
         return balls[ballIndex];
+    }
+
+    void DisplayGameOver()
+    {
+        GameObject.FindObjectOfType<GameOver>().Show();
     }
 }

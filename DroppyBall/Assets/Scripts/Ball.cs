@@ -43,11 +43,11 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // if(other.gameObject.tag == "Wall")
-        // {
-        //     rb.velocity = Vector3.zero;
-        //     rb.angularVelocity = Vector3.zero;
-        // }
+        if(other.gameObject.tag == "Currency")
+        {
+            player.AddCurrency(5);
+            Destroy(other.gameObject);
+        }
     }
 
     void StopMotion()

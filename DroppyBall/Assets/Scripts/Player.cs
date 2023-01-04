@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] int ballIndex; 
     [SerializeField] List<GameObject> balls;   
+
+
+    int currency = 0;
     
     int lives = 0;
     int score = 0;
@@ -23,13 +26,6 @@ public class Player : MonoBehaviour
         Instantiate(balls[ballIndex], new Vector3(0, 1, 0), Quaternion.identity);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
-
     public void DeductLife()
     {
         lives--;
@@ -40,6 +36,11 @@ public class Player : MonoBehaviour
     public void AddLife()
     {
         lives++;
+    }
+
+    public void AddCurrency(int amount)
+    {
+        currency += amount;
     }
 
     public void AddScore(int x)

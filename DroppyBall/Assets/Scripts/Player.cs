@@ -14,7 +14,9 @@ public class Player : MonoBehaviour
     
     int lives = 0;
     int score = 0;
+
     TextMeshProUGUI scoreTMP;
+    TextMeshProUGUI currencyTMP;
 
 
 
@@ -23,6 +25,10 @@ public class Player : MonoBehaviour
     {
         scoreTMP = GameObject.FindGameObjectWithTag("ScoreTMP").GetComponent<TextMeshProUGUI>();
         scoreTMP.text = "Score: 0";
+
+        currencyTMP = GameObject.FindGameObjectWithTag("CurrencyTMP").GetComponent<TextMeshProUGUI>();
+        currencyTMP.text = "$ ";
+        
         Instantiate(balls[ballIndex], new Vector3(0, 1, 0), Quaternion.identity);
     }
 
@@ -41,6 +47,7 @@ public class Player : MonoBehaviour
     public void AddCurrency(int amount)
     {
         currency += amount;
+        currencyTMP.text = "$ " + currency.ToString();
     }
 
     public void AddScore(int x)

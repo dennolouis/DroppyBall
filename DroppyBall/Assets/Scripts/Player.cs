@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         scoreTMP.text = "Score: 0";
 
         currencyTMP = GameObject.FindGameObjectWithTag("CurrencyTMP").GetComponent<TextMeshProUGUI>();
-        currencyTMP.text = "$ ";
+        currencyTMP.text = "$ -";
         
         Instantiate(balls[ballIndex], new Vector3(0, 1, 0), Quaternion.identity);
     }

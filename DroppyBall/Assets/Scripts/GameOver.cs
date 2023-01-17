@@ -13,16 +13,8 @@ public class GameOver : MonoBehaviour
         screen.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Show()
     {
         screen.SetActive(true);
     }
-
-
 }

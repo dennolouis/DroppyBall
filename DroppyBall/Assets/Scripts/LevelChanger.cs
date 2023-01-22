@@ -11,6 +11,7 @@ public class LevelChanger : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    //this function is what fades to the next level.
     public void FadeToLevel(int levelIndex)
     {
         levelToLoad = levelIndex;

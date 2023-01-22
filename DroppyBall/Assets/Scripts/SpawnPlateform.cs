@@ -11,28 +11,36 @@ public class SpawnPlateform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //immideately spawn basic platforms at start of the game
         Spawn();
+
+        //start spawning verticle platforms after 50 seconds
         Invoke("SpawnVerticle", 50);
+
+        //start spawning bucket platforms after 80 seconds
         Invoke("SpawnBucket", 80);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void Spawn()
     {
+        //recursively spawn basic platforms
+
         float xpos = Random.Range(-2.5f, 2.5f);
         GameObject plat = Instantiate(platform, new Vector3(xpos, -5f, 0), Quaternion.identity);
+        
+        //Destroy after 4.5 seconds
         Destroy(plat, 4.5f);
+
+        //call spawn again in 0.5 seconds
         Invoke("Spawn", 0.5f);
     }
 
     void SpawnVerticle()
     {
+        //number of verticle platforms to spawn
         int n = Random.Range(1, 3);
+        
         for(int i = 0; i < n; i++)
         {
             float xpos = Random.Range(-2.5f, 2.5f);

@@ -5,16 +5,23 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
 
+    //Ball neeeds a rigidbody so we can apply physics
     Rigidbody rb;
+    
+    //reference to the player so that we can 
     Player player;
 
+    //speed that the ball moves
     [SerializeField] float speed = 10;
 
     // Start is called before the first frame update
     void Start()
     {
+        //get the referrences
         rb =  GetComponent<Rigidbody>();
         player = FindObjectOfType<Player>();
+
+        //each time a ball is spawn, we add a life to the player
         player.AddLife();
     }
 
@@ -29,6 +36,7 @@ public class Ball : MonoBehaviour
 
     void MoveLeft()
     {
+        //stop the velocity so that before we move so we dont add too much force
         StopMotion();
         //transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed, Space.World);
         rb.AddForce(new Vector3(-1, 0, 0) * speed);
@@ -36,6 +44,7 @@ public class Ball : MonoBehaviour
 
     void MoveRight()
     {
+        //stop the velocity so that before we move so we dont add too much force
         StopMotion();
         //transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime * speed, Space.World);
         rb.AddForce(new Vector3(1, 0, 0) * speed);
@@ -43,6 +52,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        //add money if collided with the currency game object
         if(other.gameObject.tag == "Currency")
         {
             player.AddCurrency(5);
@@ -52,6 +62,7 @@ public class Ball : MonoBehaviour
 
     void StopMotion()
     {
+        //stop velocity
         Vector3 velocity = rb.velocity;
         velocity.x = 0;
 
@@ -65,6 +76,7 @@ public class Ball : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        //when the ball reaches the top of the screen, destroy it and deduct a life
         if(other.gameObject.tag == "Finish")
         {
             player.DeductLife();
@@ -75,6 +87,7 @@ public class Ball : MonoBehaviour
    
     private void OnTriggerExit(Collider other)
     {
+        //the score adds after the ball passes through a tripper in the platforms
         if(other.gameObject.tag == "ScoreTrigger")
             player.AddScore(1);
     }

@@ -13,7 +13,11 @@ public class Spin : MonoBehaviour
 
     private void Start()
     {
+        //pick a direction to spin (1 or -1)
         direction = Random.Range(0, 100) <= 50 ? 1 : -1;
+
+        //set the direcction to zero (giving no spin) if this statement is true
+            //dont want too many platforms spining
         if(Random.Range(0, 100) <= 88) direction = 0;
         speed = Random.Range(speed - 5, speed + 5);
     }

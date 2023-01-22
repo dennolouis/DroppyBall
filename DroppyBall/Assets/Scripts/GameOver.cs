@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
 
     [SerializeField] GameObject screen;
 
-    // Start is called before the first frame update
+    //at the start of the game make sure the game overscreen is not shown
     void Start()
     {
         screen.SetActive(false);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    //this will not be serialized (public to the inspector). instead there will be a screen where the user can select a ball in game
     [SerializeField] int ballIndex; 
     [SerializeField] List<GameObject> balls;   
 

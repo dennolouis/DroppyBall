@@ -12,6 +12,7 @@ public class Shift : MonoBehaviour
 
     private void Start()
     {
+        //pick a direction to move
         direction = Mathf.Floor(Random.Range(-1, 2));
         audioSource = GetComponent<AudioSource>();
         speed = Random.Range(speed * 0.7f, speed * 1.3f);
@@ -20,6 +21,8 @@ public class Shift : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3(direction, 0, 0) * speed * Time.deltaTime);
+
+        //lowers volume (not even using this)
         if(audioSource)
             audioSource.volume -= 0.06f * Time.deltaTime;
     }

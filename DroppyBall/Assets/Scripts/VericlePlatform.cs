@@ -5,6 +5,8 @@ using UnityEngine;
 public class VericlePlatform : MonoBehaviour
 {
     [SerializeField] float speed = 10;
+
+    //health is the number of times this platform goes up and down
     int health;
 
     void Start()
